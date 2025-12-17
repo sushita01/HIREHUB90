@@ -19,8 +19,8 @@ HireHub is a university group project made by 3 members. It is a simple job port
 - Member 2: Samiha Firoze (ID: 233004312)
 - Member 3: Halimatu Sadiya (ID: 233032012) 
 
-> Note: All features were implemented primarily by Sushita Roy Chowdhury.
-> Database credentials used for testing belong to **Samiha Firoze**, but the project logic and code are authored by **Sushita Roy Chowdhury**.
+> Note: All features were implemented primarily by Sushita Roy Chowdhury, with some guidance and help.
+> Database credentials used for testing belong to **Samiha Firoze**, but the project logic and code are authored by **Sushita Roy Chowdhury**, under the guidance of others.
 
 
 ## Features
@@ -50,5 +50,5 @@ HireHub is a university group project made by 3 members. It is a simple job port
 ## Notes
 
 - This project was developed for **university purposes only**.  
-- All code is written and maintained by **Sushita Roy Chowdhury**.  
+- All code is written and maintained by **Sushita Roy Chowdhury**, with assistance and advice.  
 - Unauthorized public sharing, copying, or reposting is **strictly prohibited**.  
