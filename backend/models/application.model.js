@@ -10,6 +10,7 @@ const applicationSchema = new mongoose.Schema({
   type: { type: String },       // optional
   salary: { type: String },     // optional
   status: { type: String, default: "Pending" },
+   isProxy: { type: Boolean, default: false },  // <- new field
 }, { timestamps: true });
 
 export default mongoose.model("Application", applicationSchema);

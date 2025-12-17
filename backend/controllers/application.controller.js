@@ -5,28 +5,38 @@ import Job from "../models/job.model.js";
 // CREATE: Apply for a job
 export const applyJob = async (req, res) => {
   try {
-    const { userId, jobId, jobTitle, company, location, type, salary } = req.body;
+    const { userId, jobId, jobTitle, company, location, type, salary, isProxy} = req.body;
 
-    if (!userId || !jobId || !jobTitle || !company) {
+    if (!userId || !jobId || !jobTitle || !company  || (!jobId && !isProxy)) {
       return res.status(400).json({ success: false, message: "All fields are required" });
     }
 
     const user = await User.findById(userId);
     if (!user) return res.status(404).json({ success: false, message: "User not found" });
     if (user.role !== "jobseeker") return res.status(403).json({ success: false, message: "Only job seekers can apply" });
+    
+    // Ensure isProxy has a boolean value
+    const proxy = !!isProxy;
 
-    const existingApp = await Application.findOne({ user: userId, job: jobId });
+     let existingApp;
+
+    if (proxy) {
+      existingApp = await Application.findOne({ user: userId, jobTitle, company, isProxy: true });
+    } else {
+     existingApp = await Application.findOne({ user: userId, job: jobId });
+    }
     if (existingApp) return res.status(400).json({ success: false, message: "You have already applied for this job" });
 
     // Save fallback fields for proxy jobs
     const application = await Application.create({ 
       user: userId, 
-      job: jobId, 
+      job: jobId || null,          // jobId can be null for proxy jobs
       jobTitle, 
       company, 
       location: location || "N/A",   // optional fallback
       type: type || "N/A",           // optional fallback
-      salary: salary || "N/A"        // optional fallback
+      salary: salary || "N/A" ,       // optional fallback
+       isProxy: proxy,
     });
 
     return res.status(201).json({ success: true, application });

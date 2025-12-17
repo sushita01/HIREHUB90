@@ -56,6 +56,7 @@ export default function JobDetails() {
         jobId,
         jobTitle: job.title,
         company: job.company,
+        isProxy: !job._id, // mark as proxy if no real _id
       });
 
       setMessage(data.message || (data.success ? "Application submitted!" : "Application failed."));
