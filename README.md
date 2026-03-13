@@ -1,13 +1,5 @@
 # HireHub - A Job Portal Website
 
-## ⚠️ Copyright Notice
-
-© 2025 Sushita Roy Chowdhury. All rights reserved.  
-
-This repository and its source code are the intellectual property of Sushita Roy Chowdhury.  
-The code is shared strictly for academic evaluation purposes. Unauthorized copying, reposting, or public redistribution is prohibited.
-
-
 ## Project Overview
 
 HireHub is a university group project made by 3 members. It is a simple job portal where job seekers can apply for jobs and recruiters can post jobs.
@@ -18,9 +10,6 @@ HireHub is a university group project made by 3 members. It is a simple job port
 - Member 1: Sushita Roy Chowdhury (ID: 233001412) 
 - Member 2: Samiha Firoze (ID: 233004312)
 - Member 3: Halimatu Sadiya (ID: 233032012) 
-
-> Note: All features were implemented primarily by Sushita Roy Chowdhury, with some guidance and help.
-> Database credentials used for testing belong to **Samiha Firoze**, but the project logic and code are authored by **Sushita Roy Chowdhury**, under the guidance of others.
 
 
 ## Features
