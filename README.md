@@ -39,5 +39,3 @@ HireHub is a university group project made by 3 members. It is a simple job port
 ## Notes
 
 - This project was developed for **university purposes only**.  
-- All code is written and maintained by **Sushita Roy Chowdhury**, with assistance and advice.  
-- Unauthorized public sharing, copying, or reposting is **strictly prohibited**.  
